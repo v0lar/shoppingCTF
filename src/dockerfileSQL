@@ -1,0 +1,4 @@
+FROM juts12/sqlctf:0.1
+
+COPY ./SQL/ /docker-entrypoint-initdb.d/
+RUN chown -R mysql:mysql /docker-entrypoint-initdb.d/

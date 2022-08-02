@@ -1,0 +1,20 @@
+version: "3"
+services:
+  shoppingctf:
+    build: .
+    ports:
+      - 1012:80
+    restart: unless-stopped
+  mysql:
+    container_name: mysql-server
+    restart: always
+    build:
+      context: ./src
+      dockerfile: dockerfileSQL
+    environment:
+      - MYSQL_ROOT_PASSWORD=.sweetpwd.
+      - MYSQL_DATABASE=shopping
+      - MYSQL_USER=db_user
+      - MYSQL_PASSWORD=.mypwd
+    ports:
+      - "8081:3306"
