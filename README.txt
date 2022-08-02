@@ -1,6 +1,6 @@
 ## Shopping platform
 
-This website is vulnerable to SQL injection and malicious file uploads.
+
 
 
 **DESCRIPTION**
